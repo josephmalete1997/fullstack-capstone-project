@@ -6,6 +6,7 @@ import RegisterPage from './components/RegisterPage/RegisterPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+
 function App() {
   const navigate = useNavigate();
   return (
@@ -20,4 +21,5 @@ function App() {
         </>
   );
 }
+
 export default App;

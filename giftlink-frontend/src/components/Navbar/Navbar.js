@@ -7,12 +7,10 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
 
-                    <li className="nav-item">
-                    <a className="nav-link" href="/home.html">Home</a> {/* Link to home.html */}
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/app">Gifts</a> {/* Updated Link */}
-                    </li>
+                    <li className="nav-item"><a className="nav-link" href="/home.html">Home</a> {/* Link to home.html */}</li>
+                    <li className="nav-item"><a className="nav-link" href="/app">Gifts</a> {/* Updated Link */}</li>
+                     <li className="nav-item"><a className="nav-link login-btn" href="/app/login">Login</a></li>
+                    <li className="nav-item"><a className="nav-link register-btn" href="/app/register">Register</a></li>
                 </ul>
             </div>
         </nav>
