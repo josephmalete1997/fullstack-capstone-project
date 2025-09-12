@@ -5,16 +5,9 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
-        // Task 1: Connect to MongoDB
         const db = await connectToDatabase();
-
-        // Task 2: Retrieve the gifts collection
         const collection = db.collection("gifts");
-
-        // Task 3: Fetch all gifts as an array
         const gifts = await collection.find({}).toArray();
-
-        // Task 4: Return the gifts
         res.json(gifts);
     } catch (e) {
         console.error('Error fetching gifts:', e);
@@ -24,15 +17,9 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        // Task 1: Connect to MongoDB
         const db = await connectToDatabase();
-
-        // Task 2: Retrieve the gifts collection
         const collection = db.collection("gifts");
-
         const id = req.params.id;
-
-        // Task 3: Find a specific gift by ID
         const gift = await collection.findOne({ _id: new ObjectId(id) });
 
         if (!gift) {
